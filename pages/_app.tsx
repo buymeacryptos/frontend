@@ -49,9 +49,15 @@ const wagmiConfig = createConfig({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
       <RainbowKitProvider
         theme={lightTheme({
-          accentColor: "#828282",
+          accentColor: "#00f900",
           accentColorForeground: "white",
           fontStack: "system",
           overlayBlur: "small",

@@ -13,13 +13,13 @@ const FrontPage = () => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <div className="mt-10 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-gray-400 bg-clip-text text-3xl font-extrabold sm:text-5xl">
+        <h1 className="mt-20 text-gray-400 bg-clip-text text-3xl font-extrabold sm:text-5xl">
           INVEST IN CRYPTO WITH
           <span className="sm:block">
             <span className="color">
-              <span className="underline">D</span>OLLAR&nbsp;
+              <span className="underline border-[black]">D</span>OLLAR&nbsp;
               <span className="underline">C</span>OST&nbsp;
               <span className="underline">A</span>VERAGE&nbsp;
             </span>
@@ -32,7 +32,7 @@ const FrontPage = () => {
 
         <div className="mt-8 flex flex-wrap m-10 justify-center">
           <Link
-            className="block w-full m-0 rounded-3xl border-blue-600 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            className="block w-full m-0 rounded-3xl border-[yellow] border-4 p-8 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
             to="digitalWallet"
             spy={true}
             smooth={true}
