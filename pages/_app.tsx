@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="star"></div>
       <RainbowKitProvider
         theme={lightTheme({
-          accentColor: "#828282",
+          accentColor: "#00f900",
           accentColorForeground: "white",
           fontStack: "system",
           overlayBlur: "small",

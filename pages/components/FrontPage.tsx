@@ -13,9 +13,9 @@ const FrontPage = () => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <div className="mt-10 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-gray-400 bg-clip-text text-3xl font-extrabold sm:text-5xl">
+        <h1 className="mt-20 text-gray-400 bg-clip-text text-3xl font-extrabold sm:text-5xl">
           INVEST IN CRYPTO WITH
           <span className="sm:block">
             <span className="color">

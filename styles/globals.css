@@ -53,7 +53,6 @@ a {
   overflow: hidden;
 }
 
-/* --------------------------------- */
 /* ----------------------------------------- */
 
 .stars {
@@ -434,4 +433,40 @@ a {
   50% {
     opacity: 0.6;
   }
+}
+
+/* --------------------------------- */
+
+/* style4 */
+.style4,
+.style5 {
+  position: relative;
+  display: inline-block;
+}
+.style4:after,
+.style5:after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #00f900;
+  top: 100%;
+  transition: all 0.4s;
+}
+
+/* style4 */
+.style4:after {
+  right: 100%;
+  left: 0;
+}
+.style4:hover:after {
+  right: 0;
+}
+
+/* style5 */
+.style5:after {
+  left: 50%;
+  right: 50%;
+}
+.style5:hover:after {
+  right: 0;
+  left: 0;
 }

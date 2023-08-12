@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import Navigation from "./components/Navigation";
 import FrontPage from "./components/FrontPage";
 import DigitalWallet from "./components/DigitalWallet";
+import CreditCard from "./components/CreditCard";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Navigation />
       <FrontPage />
       <DigitalWallet />
+      <CreditCard />
     </div>
   );
 };
