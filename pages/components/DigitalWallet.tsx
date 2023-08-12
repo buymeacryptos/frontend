@@ -1,4 +1,8 @@
 const DigitalWallet = () => {
+  const connect = () => {
+    return <h2>Heyyyyyyyyyyy</h2>;
+  };
+
   return (
     <div className="digitalWallet">
       <div>
@@ -12,11 +16,12 @@ const DigitalWallet = () => {
             <a className="image-rounded-left image-rounded block w-full rounded-3xl border-blue-600 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
               NO
             </a>
-            <div>
-              <a className="image-rounded-left image-rounded block w-full rounded-3xl border-blue-600 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
-                YES
-              </a>
-            </div>
+
+            <a
+              onClick={connect}
+              className="image-rounded-left image-rounded block w-full rounded-3xl border-blue-600 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+              YES
+            </a>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import DigitalWallet from "./components/DigitalWallet";
 const Home: NextPage = () => {
   return (
     <div>
+      <title> Buy Me a Crypto</title>
       <Navigation />
       <FrontPage />
       <DigitalWallet />

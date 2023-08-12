@@ -19,7 +19,7 @@ const FrontPage = () => {
           INVEST IN CRYPTO WITH
           <span className="sm:block">
             <span className="color">
-              <span className="underline">D</span>OLLAR&nbsp;
+              <span className="underline border-[black]">D</span>OLLAR&nbsp;
               <span className="underline">C</span>OST&nbsp;
               <span className="underline">A</span>VERAGE&nbsp;
             </span>
@@ -32,7 +32,7 @@ const FrontPage = () => {
 
         <div className="mt-8 flex flex-wrap m-10 justify-center">
           <Link
-            className="block w-full m-0 rounded-3xl border-blue-600 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+            className="block w-full m-0 rounded-3xl border-[yellow] border-4 p-8 bg-[#00F900] px-12 py-3 text-sm font-medium text-white hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
             to="digitalWallet"
             spy={true}
             smooth={true}
