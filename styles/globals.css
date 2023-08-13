@@ -1,16 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   background: #ededed;
+  overflow-x: hidden;
 }
-
+button {
+  cursor: pointer;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -392,7 +395,7 @@ a {
 .star::before,
 .star::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: calc(var(--star-width) / -2);
   width: var(--star-width);
@@ -445,7 +448,7 @@ a {
 }
 .style4:after,
 .style5:after {
-  content: "";
+  content: '';
   position: absolute;
   border-bottom: 2px solid #00f900;
   top: 100%;
