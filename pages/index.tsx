@@ -11,7 +11,7 @@ import StepThree from './components/steps/step-three'
 import StepTwo from './components/steps/step-two'
 import StepFour from './components/steps/step-four'
 
-const Home: NextPage = () => {
+const Home: NextPage = () => { 
   return (
     <div>
       <title> Buy Me a Crypto</title>
