@@ -1,41 +1,43 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import transakSDK from '@transak/transak-sdk'
-
-const settings = {
-  apiKey: 'cf5868eb-a8bb-45c8-a2db-4309e5f8b412', // Your API Key
-  environment: 'STAGING', // STAGING/PRODUCTION
-  defaultCryptoCurrency: 'ETH',
-  themeColor: '000000', // App theme color
-  hostURL: 'window.location.origin',
-  widgetHeight: '500px',
-  widgetWidth: '500px',
-}
-
-export function openTransak() {
-  const transak = new transakSDK(settings)
-
-  transak.init()
-
-  // To get all the events
-  transak.on(transak.ALL_EVENTS, (data) => {
-    console.log(data)
-  })
-
-  // This will trigger when the user closed the widget
-  transak.on(transak.EVENTS.TRANSAK_WIDGET_CLOSE, (eventData) => {
-    console.log(eventData)
-    transak.close()
-  })
-
-  // This will trigger when the user marks payment is made.
-  transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
-    console.log(orderData)
-    window.alert('Payment Success')
-    transak.close()
-  })
-}
+import { useAccount } from 'wagmi'
 
 const StepTwo = () => {
+  const { address, isConnecting, isDisconnected } = useAccount()
+  const settings = {
+    apiKey: 'cf5868eb-a8bb-45c8-a2db-4309e5f8b412', // Your API Key
+    environment: 'STAGING', // STAGING/PRODUCTION
+    defaultCryptoCurrency: 'ETH',
+    themeColor: '000000', // App theme color
+    hostURL: 'window.location.origin',
+    widgetHeight: '500px',
+    widgetWidth: '500px',
+  }
+
+  function openTransak() {
+    const transak = new transakSDK(settings)
+
+    transak.init()
+
+    // To get all the events
+    transak.on(transak.ALL_EVENTS, (data) => {
+      console.log(data)
+    })
+
+    // This will trigger when the user closed the widget
+    transak.on(transak.EVENTS.TRANSAK_WIDGET_CLOSE, (eventData) => {
+      console.log(eventData)
+      transak.close()
+    })
+
+    // This will trigger when the user marks payment is made.
+    transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
+      console.log(orderData)
+      window.alert('Payment Success')
+      transak.close()
+    })
+  }
+  console.log(address)
   return (
     <div className="w-11/12 mx-auto mt-20">
       <div className="flex mb-10 text-bold items-center justify-between">
