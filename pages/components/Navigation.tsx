@@ -1,12 +1,16 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import Link from 'next/link'
 
 const Navigation = () => {
   return (
-    <header>
-      <div className="flex items-center lg:order-2 absolute right-20 ">
-        <button className="block w-full rounded-3xl border-blue-600 px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+    <header className="">
+      <div className="flex items-center lg:order-2 fixed right-20 ">
+        <Link
+          href={'/dashboard'}
+          className="block w-full rounded-3xl border-blue-600 px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+        >
           Dashboard
-        </button>
+        </Link>
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +29,7 @@ const Navigation = () => {
         </button>
       </div>
 
-      <h1 className="text-2xl font-bold text-[#828282] absolute left-20">
+      <h1 className="text-2xl font-bold text-[#828282] fixed left-20">
         BUY ME A CRYPTO
       </h1>
     </header>
