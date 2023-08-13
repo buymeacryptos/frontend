@@ -1,9 +1,12 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import transakSDK from '@transak/transak-sdk'
-import { useAccount } from 'wagmi'
+import { useAccount, useConnect, useChainId } from 'wagmi'
+
+
 
 const StepTwo = () => {
-  const { address, isConnecting, isDisconnected } = useAccount()
+  const chainId = useChainId()
+
   const settings = {
     apiKey: 'cf5868eb-a8bb-45c8-a2db-4309e5f8b412', // Your API Key
     environment: 'STAGING', // STAGING/PRODUCTION
@@ -37,7 +40,6 @@ const StepTwo = () => {
       transak.close()
     })
   }
-  console.log(address)
   return (
     <div className="w-11/12 mx-auto mt-20">
       <div className="flex mb-10 text-bold items-center justify-between">

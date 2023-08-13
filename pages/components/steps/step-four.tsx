@@ -1,5 +1,8 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
+import { useAccount, useContractWrite } from 'wagmi'
+import { erc20ABI } from 'wagmi'
 import arb from '../../../public/arb.png'
 import lido from '../../../public/lido.png'
 import link from '../../../public/link.png'
@@ -12,6 +15,20 @@ import wld from '../../../public/wld.png'
 import wmatic from '../../../public/wmatic.png'
 
 function StepFour() {
+  const router = useRouter()
+  const { address } = useAccount()
+  const { data, isLoading, isSuccess, write } = useContractWrite({
+    address: '0x07865c6E87B9F70255377e024ace6630C1Eaa37F',
+    abi: erc20ABI,
+    functionName: 'approve',
+  })
+  const [amount, setAmount] = useState(0)
+  const tokens_ = BigInt(amount * 1000000000000000)
+
+  useEffect(() => {
+    if (isSuccess) router.push('/dashboard')
+  }, [isSuccess])
+
   const [tokens, setTokens] = useState([
     { name: 'Optimism', address: '0x', image: op, key: 'op' },
     { name: 'Arbitrum', address: '0x', image: arb, key: 'arb' },
@@ -148,15 +165,19 @@ function StepFour() {
                 <p className="text-xl mb-3">Invesment sum</p>
                 <input
                   className="bg-gray-200 text-black px-5 rounded-2xl py-2"
-                  type="text"
+                  type="number"
                   placeholder="$5000"
+                  value={amount}
+                  onChange={(e) =>
+                    setAmount(parseInt(e.target.value ? e.target.value : '0'))
+                  }
                 />
               </div>
               <div className="">
                 <p className="text-xl mb-3">one-time paymant</p>
                 <input
                   className="bg-gray-200 text-black px-5 rounded-2xl py-2"
-                  type="text"
+                  type="number"
                   placeholder="$5000"
                 />
               </div>
@@ -185,7 +206,17 @@ function StepFour() {
                   </button>
                 </p>
                 <p>
-                  <button className="bg-green-500 text-black px-5 rounded-2xl py-2">
+                  <button
+                    onClick={async () =>
+                      await write({
+                        args: [
+                          '0xCB68fA1cBBCdCd993651B07E24e7530bab13558e',
+                          tokens_,
+                        ],
+                      })
+                    }
+                    className="bg-green-500 text-black px-5 rounded-2xl py-2"
+                  >
                     Start Invesment
                   </button>
                 </p>
