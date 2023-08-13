@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/dashboard.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import {
   getDefaultWallets,
@@ -49,12 +50,6 @@ const wagmiConfig = createConfig({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
-      <div className="star"></div>
       <RainbowKitProvider
         theme={lightTheme({
           accentColor: "#00f900",

@@ -1,10 +1,10 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-
 const Navigation = () => {
   return (
     <header>
       <div className="flex items-center lg:order-2 absolute top-20 right-20 ">
-        <a className="block w-full rounded-3xl border-blue-600 px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+        <a
+          href="/dashboard"
+          className="block w-full rounded-3xl border-blue-600 px-12 py-3 text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
           Dashboard
         </a>
         <svg

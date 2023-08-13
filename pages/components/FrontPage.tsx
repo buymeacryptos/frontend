@@ -1,19 +1,14 @@
 import { Link } from "react-scroll";
 
 const FrontPage = () => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    //remove everything before the hash
-    const targetId = e.currentTarget.href.replace(/.*\#/, "");
-    const elem = document.getElementById(targetId);
-    window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="mt-10 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
+      <div className="star"></div>
       <div className="mx-auto max-w-3xl text-center">
         <h1 className="mt-20 text-gray-400 bg-clip-text text-3xl font-extrabold sm:text-5xl">
           INVEST IN CRYPTO WITH
