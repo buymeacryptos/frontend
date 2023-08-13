@@ -65,7 +65,7 @@ a {
 }
 
 .star {
-  --star-color: violet;
+  --star-color: rgb(6, 1, 162);
   --star-tail-length: 6em;
   --star-tail-height: 2px;
   --star-width: calc(var(--star-tail-length) / 6);
