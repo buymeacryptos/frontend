@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import dashboard from '../../public/dashboard.png'
+
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -9,7 +12,7 @@ const Dashboard = () => {
         <div className="">YOUR ASSETS</div>
       </header>
 
-      <main className="p-6 sm:p-10 space-y-6 flex-1 flex flex-row overflow-y-hidden">
+      {/* <main className="p-6 sm:p-10 space-y-6 flex-1 flex flex-row overflow-y-hidden">
         <div className="h-screen grid grid-cols-6 grid-rows-3 items-center justify-center space-x-10">
           <div className="justify-center col-span-3 p-8 items-center p-8 bg-white shadow rounded-3xl">
             <div>
@@ -58,13 +61,13 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </main>
-
+      </main> */}
+      <Image className="w-full p-8" src={dashboard} alt="" />
       <footer className="bg-white rounded-3xl shadow m-4">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2023{' '}
             <a href="/" className="hover:underline">
               Buy Me A Crypto™
             </a>
@@ -73,7 +76,7 @@ const Dashboard = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

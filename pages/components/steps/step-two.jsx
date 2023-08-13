@@ -2,8 +2,6 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import transakSDK from '@transak/transak-sdk'
 import { useAccount, useConnect, useChainId } from 'wagmi'
 
-
-
 const StepTwo = () => {
   const chainId = useChainId()
 
@@ -12,7 +10,7 @@ const StepTwo = () => {
     environment: 'STAGING', // STAGING/PRODUCTION
     defaultCryptoCurrency: 'ETH',
     themeColor: '000000', // App theme color
-    hostURL: 'window.location.origin',
+    hostURL: 'https://www.buymeacrypto.com/',
     widgetHeight: '500px',
     widgetWidth: '500px',
   }
