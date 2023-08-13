@@ -40,10 +40,11 @@ function StepThree() {
     refuel: 'Refuel',
   }
   const [resp, setResp] = useState('')
+  type T = keyof typeof FAQ
 
   const [choosed, setChoosed] = useState<string>('')
   useEffect(() => {
-    setResp(FAQ[choosed])
+    setResp(FAQ[choosed as keyof typeof FAQ])
   }, [choosed])
   return (
     <div className="w-11/12 mt-20 mx-auto">
