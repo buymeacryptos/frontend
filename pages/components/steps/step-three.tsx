@@ -23,8 +23,8 @@ function StepThree() {
     {"name":"Wrapped Bitcoin","address":"0x","image":wbtc,"key":"wbtc"},
     {"name":"Synthetix Network","address":"0x","image":snx,"key":"snx"},
     {"name":"WORLDCOIN","address":"0x","image":wld,"key":"wld"}])
-  const [choosed, setChoosed] = useState(null)
-  return (
+    const [choosed, setChoosed] = useState<null | string>(null)
+    return (
     <div className="w-11/12 mt-20 mx-auto">
       <div className="flex mb-10 text-bold items-center justify-between">
         <p className="text-6xl">Step 3</p>

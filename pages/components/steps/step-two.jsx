@@ -17,18 +17,18 @@ export function openTransak() {
   transak.init()
 
   // To get all the events
-  transak.on(transak.ALL_EVENTS, (data: any) => {
+  transak.on(transak.ALL_EVENTS, (data) => {
     console.log(data)
   })
 
   // This will trigger when the user closed the widget
-  transak.on(transak.EVENTS.TRANSAK_WIDGET_CLOSE, (eventData: any) => {
+  transak.on(transak.EVENTS.TRANSAK_WIDGET_CLOSE, (eventData) => {
     console.log(eventData)
     transak.close()
   })
 
   // This will trigger when the user marks payment is made.
-  transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData: any) => {
+  transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
     console.log(orderData)
     window.alert('Payment Success')
     transak.close()
